@@ -1,0 +1,25 @@
+DROP TABLE emp;
+DROP TABLE emp1;
+CREATE TABLE emp(
+    NAME VARCHAR(10)NOT NULL, SALARY INT(6)NOT NULL
+);
+CREATE TABLE emp1(
+    NAME VARCHAR(10)NOT NULL, EMPID INT(5)NOT NULL
+);
+INSERT INTO emp(NAME, SALARY)
+VALUES('Ashu', 10000),
+    ('Asma', 1200),
+    ('Asif', 2000),
+    ('Arif', 1000),
+    ('Niyas', 3000);
+INSERT INTO emp1(NAME, EMPID)
+VALUES('Fathi', 12),
+    ('Sumi', 32),
+    ('Priya', 11),
+    ('Wahab', 10),
+    ('Sweety', 9),
+    ('Asma', 1200);
+SELECT emp.NAME,SALARY FROM emp,emp1 WHERE emp.NAME=emp1.NAME;
+SELECT emp.NAME,SALARY FROM emp LEFT OUTER JOIN emp1 ON emp.NAME=emp1.NAME;
+SELECT emp1.NAME,EMPID FROM emp RIGHT OUTER JOIN emp1 ON emp.NAME=emp1.NAME;
+SELECT emp1.NAME,emp1.EMPID,SALARY FROM emp FULL JOIN emp1;
