@@ -1,4 +1,3 @@
-DROP TABLE book;
 CREATE TABLE book
     (bookNo INT(10), bookName VARCHAR(20), Author VARCHAR(10), Price FLOAT(20));
 INSERT INTO book(bookNo, bookName, Author, Price)
